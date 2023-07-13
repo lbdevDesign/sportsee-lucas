@@ -1,0 +1,23 @@
+.ChartSessionContainer{
+    width: 25%;
+    height: 40%;
+    margin-top:-20%;
+    background-color: #ff0000;
+    border-radius: 5px;
+}
+.textLegendSession{
+    position: absolute;
+    margin: 0.5rem 0 0 0.5rem ;
+    color:rgba(255, 255, 255, 0.504);
+    width: 120px;
+}
+.TooltipDuration{
+    width: 50px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 1rem;
+}
+.TooltipTextDuration{
+    font-size: 12px;
+}
