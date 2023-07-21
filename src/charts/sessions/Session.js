@@ -2,6 +2,18 @@
 import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { CTSession } from '../sessions/CTSession'
 
+
+async function userSession() {
+  const response = await fetch('http://localhost:3000/user/12/average-sessions');
+  const session = await response.json();
+
+  console.log(session); 
+  return session;
+}
+
+const apiData = await userSession();
+console.log(apiData.data.sessions);
+
 const data = [
   {
     name: 'L',
@@ -42,7 +54,7 @@ export default class Example extends LineChart {
         <LineChart
           width={730}
           height={250}
-          data={data}
+          data={apiData.data.sessions}
           margin={{
             top: 80,
             right: 30,

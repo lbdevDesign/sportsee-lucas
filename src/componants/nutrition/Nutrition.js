@@ -7,6 +7,16 @@ import LipidesSvg from '../../assets/lipides.svg'
 
 import './nutrition.css'
 
+async function userNutrition() {
+  const response = await fetch('http://localhost:3000/user/12');
+  const nutrition = await response.json();
+
+  console.log(nutrition); 
+  return nutrition;
+}
+
+const apiData = await userNutrition();
+
 function Nutrition() {
   return (
     <div className="cadres-container">
@@ -15,7 +25,7 @@ function Nutrition() {
             <img className='icon-calories' src={CaloriesSvg} alt='Calories' />
         </div>
         <div className='text-content'>
-            <p className='quantity'>1,930kcal</p>
+            <p className='quantity'>{apiData.data.keyData.calorieCount}kcal</p>
             <p className='label'>Calories</p>
         </div>
       </div>
@@ -24,7 +34,7 @@ function Nutrition() {
             <img className='icon-proteines' src={ProteinesSvg} alt='Calories' />
         </div>
         <div className='text-content'>
-            <p className='quantity'>155g</p>
+            <p className='quantity'>{apiData.data.keyData.proteinCount}g</p>
             <p className='label'>Proteines</p>
         </div>
       </div>
@@ -33,7 +43,7 @@ function Nutrition() {
             <img className='icon-glucides' src={GlucidesSvg} alt='Calories' />
         </div>
         <div className='text-content'>
-            <p className='quantity'>290g</p>
+            <p className='quantity'>{apiData.data.keyData.carbohydrateCount}g</p>
             <p className='label'>Glucides</p>
         </div>
       </div>
@@ -42,7 +52,7 @@ function Nutrition() {
             <img className='icon-lipides' src={LipidesSvg} alt='Calories' />
         </div>
         <div className='text-content'>
-            <p className='quantity'>50g</p>
+            <p className='quantity'>{apiData.data.keyData.lipidCount}g</p>
             <p className='label'>Lipides</p>
         </div>
       </div>
