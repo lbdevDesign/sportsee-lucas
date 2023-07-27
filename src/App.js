@@ -23,7 +23,7 @@ function App() {
 
       <main className='dashboard-container'>
         <h1 className='dashboard-title'>Bonjour <span>{apiData.data.userInfos.firstName}</span></h1>
-        <p className='dashboard-subtitle'>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
+        <p className='dashboard-subtitle'>Félicitations ! Vous avez explosé vos objectifs hier 👏</p>
 
         <div className='dashboard-content'>
           <GraphicGrid />
