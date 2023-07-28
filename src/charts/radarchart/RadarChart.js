@@ -3,14 +3,22 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Responsi
 
 
 async function userRadar() {
-  const response = await fetch('http://localhost:3000/user/12/performance');
+  const response = await fetch('http://localhost:3000/user/18/performance');
   const radar = await response.json();
-
-  console.log(radar); 
+ 
   return radar;
 }
 
 const apiData = await userRadar();
+
+const kind = { 1: 'Cardio', 2: 'Energie', 3: 'Endurance', 4: 'Force', 5: 'Vitesse', 6: 'Intensité' }
+
+const mapData = apiData.data.data.map(data => ({
+
+  value: data.value,
+  kind: kind[data.kind],
+
+}))
 
 const data = [
     {
@@ -55,12 +63,13 @@ const data = [
     static demoUrl = 'https://codesandbox.io/s/simple-radar-chart-rjoc6';
   
     render() {
+      
       return (
         <ResponsiveContainer width="100%" height="100%">
-          <RadarChart cx="48%" cy="50%" outerRadius="60%" data={apiData.data[0]}>
+          <RadarChart cx="48%" cy="50%" outerRadius="60%" data={mapData}>
             <PolarGrid radialLines={false}/>
-            <PolarAngleAxis dataKey="subject" />
-            <Radar name="Mike" dataKey="A" stroke="red" fill="red" fillOpacity={0.6} />
+            <PolarAngleAxis dataKey="kind" />
+            <Radar name="Mike" dataKey="value" stroke="red" fill="red" fillOpacity={0.6} />
           </RadarChart>
         </ResponsiveContainer>
       );

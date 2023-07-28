@@ -4,15 +4,13 @@ import { CTSession } from '../sessions/CTSession'
 
 
 async function userSession() {
-  const response = await fetch('http://localhost:3000/user/12/average-sessions');
+  const response = await fetch('http://localhost:3000/user/18/average-sessions');
   const session = await response.json();
 
-  console.log(session); 
   return session;
 }
 
 const apiData = await userSession();
-console.log(apiData.data.sessions);
 
 const data = [
   {
@@ -62,9 +60,9 @@ export default class Example extends LineChart {
             bottom: 5,
           }}
         >
-          <XAxis dataKey="name" axisLine={false} tickLine={false} mirror={true} stroke='white'/>
+          <XAxis dataKey="day" axisLine={false} tickLine={false} mirror={true} stroke='white'/>
           <Tooltip content={<CTSession />}/>
-          <Line type="monotone" dataKey="min" stroke="white" dot=''/>
+          <Line type="monotone" dataKey="sessionLength" stroke="white" dot=''/>
         </LineChart>
       </ResponsiveContainer>
     );

@@ -3,7 +3,7 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Label } from 'recharts';
 
 
 async function userPie() {
-  const response = await fetch('http://localhost:3000/user/12');
+  const response = await fetch('http://localhost:3000/user/18');
   const pie = await response.json();
 
   console.log(pie); 
@@ -12,10 +12,16 @@ async function userPie() {
 
 const apiData = await userPie();
 
+const mapData = [
+  { name: 'Group A', value: apiData.data.todayScore },
+  { name: 'Group B', value: 1 - apiData.data.todayScore },
+]
+
 const data = [
-  { name: 'Group A', value: 22 },
+  { name: 'Group A', value: 0.22 },
+  { name: 'Group B', value: 0.78 },
 ];
-const COLORS = ['red'];
+const COLORS = ['red', 'transparent'];
 
 export default class Example extends PureComponent {
   static demoUrl = 'https://codesandbox.io/s/pie-chart-with-padding-angle-7ux0o';
@@ -26,7 +32,7 @@ export default class Example extends PureComponent {
       <ResponsiveContainer width="100%" height="100%" className="PieChart-container">
         <PieChart>
           <Pie
-            data={apiData.data.todayScore}
+            data={mapData}
             cx='50%'
             cy='50%'
             innerRadius={70}
@@ -43,7 +49,7 @@ export default class Example extends PureComponent {
               <Cell key={`cell-${index}`} fill={COLORS[index]} />
             ))}
               <Label 
-                value={apiData.data.todayScore + "%"} 
+                value={apiData.data.todayScore * 100 + "%"} 
                 position="center" 
                 fontSize={26} 
                 fontWeight={700} dy={-10}
