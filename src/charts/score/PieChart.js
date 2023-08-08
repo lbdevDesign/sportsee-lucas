@@ -24,7 +24,6 @@ const data = [
 const COLORS = ['red', 'transparent'];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/pie-chart-with-padding-angle-7ux0o';
 
   render() {
 
@@ -38,7 +37,6 @@ export default class Example extends PureComponent {
             innerRadius={70}
             outerRadius={80}
             cornerRadius={50}
-            fill="#8884d8"
             paddingAngle={5}
             dataKey="value"
             startAngle={90}
@@ -53,6 +51,7 @@ export default class Example extends PureComponent {
                 position="center" 
                 fontSize={26} 
                 fontWeight={700} dy={-10}
+                fill="#282D30"
               />
               <Label 
                 value="de votre objectif" 

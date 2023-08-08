@@ -13,8 +13,15 @@ async function userActivity() {
 
 const apiData = await userActivity();
 
+const mapData = apiData.data.sessions.map(data => ({
+
+  day: data.day.toString().slice(-1),
+  kilogram: data.kilogram,
+  calories: data.calories,
+
+}))
+
 export default class Example extends BarChart {
-  static demoUrl = 'https://codesandbox.io/s/simple-bar-chart-tpz8r';
 
   render() {
     return (
@@ -24,7 +31,7 @@ export default class Example extends BarChart {
           barGap={5}
           width={500}
           height={300}
-          data={apiData.data.sessions}
+          data={mapData}
           margin={{
             top: 5,
             right: 30,
@@ -34,7 +41,7 @@ export default class Example extends BarChart {
         >
           <CartesianGrid strokeDasharray="3 3" vertical={false}/>
           <XAxis dataKey="day" tickLine={false} minTickGap={48}/>
-          <YAxis type="number"  orientation="right" tickCount={3} tickLine={false} axisLine={false} domain={[69, 71]}/>
+          <YAxis type="number" dataKey="calories" orientation="right" tickCount={3} tickLine={false} axisLine={false} />
           <Tooltip content={<CustomTooltip />}/>
           <Legend verticalAlign="top" align='right' iconType='circle' iconSize={8} height={36}/>
           <Bar name='Poids (kg)' dataKey="kilogram" fill="#282D30" radius={[20, 20, 0, 0]} maxBarSize={10}/>

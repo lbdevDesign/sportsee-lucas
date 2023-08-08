@@ -12,6 +12,17 @@ async function userSession() {
 
 const apiData = await userSession();
 
+console.log(apiData);
+
+const day = { 1: 'L', 2: 'M', 3: 'M', 4: 'J', 5: 'V', 6: 'S', 7: 'D' }
+
+const mapData = apiData.data.sessions.map(data => ({
+
+  sessionLength: data.sessionLength,
+  day: day[data.day],
+
+}))
+
 const data = [
   {
     name: 'L',
@@ -44,7 +55,6 @@ const data = [
 ];
 
 export default class Example extends LineChart {
-  static demoUrl = 'https://codesandbox.io/s/simple-line-chart-kec3v';
 
   render() {
     return (
@@ -52,7 +62,7 @@ export default class Example extends LineChart {
         <LineChart
           width={730}
           height={250}
-          data={apiData.data.sessions}
+          data={mapData}
           margin={{
             top: 80,
             right: 30,

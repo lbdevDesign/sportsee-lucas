@@ -60,15 +60,15 @@ const data = [
   ];
   
   export default class Example extends RadarChart {
-    static demoUrl = 'https://codesandbox.io/s/simple-radar-chart-rjoc6';
   
     render() {
+
       
       return (
         <ResponsiveContainer width="100%" height="100%">
           <RadarChart cx="48%" cy="50%" outerRadius="60%" data={mapData}>
             <PolarGrid radialLines={false}/>
-            <PolarAngleAxis dataKey="kind" />
+            <PolarAngleAxis dataKey="kind"  tick={{fill:'#ffffff', fontSize:'0.65rem'}} />
             <Radar name="Mike" dataKey="value" stroke="red" fill="red" fillOpacity={0.6} />
           </RadarChart>
         </ResponsiveContainer>
