@@ -58,6 +58,7 @@ const data = [
       fullMark: 150,
     },
   ];
+
   
   export default class Example extends RadarChart {
   
