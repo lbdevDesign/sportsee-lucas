@@ -6,7 +6,7 @@ import './App.css';
 
 
 async function userInfo() {
-  const response = await fetch('http://localhost:3000/user/18');
+  const response = await fetch('http://localhost:3000/user/12');
   const info = await response.json();
 
   console.log(info); 

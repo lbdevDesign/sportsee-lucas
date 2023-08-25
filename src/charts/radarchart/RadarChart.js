@@ -3,7 +3,7 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } fro
 
 
 async function userRadar() {
-  const response = await fetch('http://localhost:3000/user/18/performance');
+  const response = await fetch('http://localhost:3000/user/12/performance');
   const radar = await response.json();
  
   return radar;

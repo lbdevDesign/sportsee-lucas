@@ -5,7 +5,7 @@ import { CustomTooltip } from './CustomTooltip';
 
 
 async function userActivity() {
-  const response = await fetch('http://localhost:3000/user/18/activity');
+  const response = await fetch('http://localhost:3000/user/12/activity');
   const activities = await response.json();
 
   return activities;

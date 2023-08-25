@@ -4,7 +4,7 @@ import { CTSession } from '../sessions/CTSession'
 
 
 async function userSession() {
-  const response = await fetch('http://localhost:3000/user/18/average-sessions');
+  const response = await fetch('http://localhost:3000/user/12/average-sessions');
   const session = await response.json();
 
   return session;
