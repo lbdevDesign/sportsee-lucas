@@ -1,5 +1,5 @@
-import React, { PureComponent } from 'react';
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 
 
 async function userRadar() {
@@ -20,7 +20,7 @@ const mapData = apiData.data.data.map(data => ({
 
 }))
 
-const data = [
+/*const data = [
     {
       subject: 'Yo',
       A: 120,
@@ -57,7 +57,7 @@ const data = [
       B: 85,
       fullMark: 150,
     },
-  ];
+  ];*/
 
   
   export default class Example extends RadarChart {
