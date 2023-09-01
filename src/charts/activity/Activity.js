@@ -3,7 +3,7 @@ import { CustomTooltip } from './CustomTooltip';
 import React, { useEffect, useState } from 'react';
 import ApiService from '../../utils/ApiService.jsx';
 
-export default function Example() {
+export default function UserActivity() {
   const [mapData, setMapData] = useState([]);
 
   useEffect(() => {
