@@ -20,44 +20,7 @@ const mapData = apiData.data.data.map(data => ({
 
 }))
 
-/*const data = [
-    {
-      subject: 'Yo',
-      A: 120,
-      B: 110,
-      fullMark: 150,
-    },
-    {
-      subject: 'Yoo',
-      A: 98,
-      B: 130,
-      fullMark: 150,
-    },
-    {
-      subject: 'Yooo',
-      A: 86,
-      B: 130,
-      fullMark: 150,
-    },
-    {
-      subject: 'YOOO',
-      A: 99,
-      B: 100,
-      fullMark: 150,
-    },
-    {
-      subject: 'YoOo',
-      A: 85,
-      B: 90,
-      fullMark: 150,
-    },
-    {
-      subject: 'Y',
-      A: 65,
-      B: 85,
-      fullMark: 150,
-    },
-  ];*/
+
 
   
   export default class Example extends RadarChart {

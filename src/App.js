@@ -4,7 +4,6 @@ import GraphicGrid from './componants/graphicgrid/GraphicGrid';
 import Nutrition from './componants/nutrition/Nutrition'
 import './App.css';
 
-
 async function userInfo() {
   const response = await fetch('http://localhost:3000/user/12');
   const info = await response.json();
@@ -16,6 +15,7 @@ async function userInfo() {
 const apiData = await userInfo();
 
 function App() {
+  console.log(process.env.REACT_APP_API_KEY);
   return (
     <>
       <Header />

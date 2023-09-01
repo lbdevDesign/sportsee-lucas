@@ -2,8 +2,9 @@ import React, { PureComponent } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Label } from 'recharts';
 
 
+
 async function userPie() {
-  const response = await fetch('http://localhost:3000/user/18');
+  const response = await fetch('http://localhost:3000/user/12');
   const pie = await response.json();
 
   console.log(pie); 

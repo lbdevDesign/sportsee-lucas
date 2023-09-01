@@ -4,7 +4,7 @@ import './graphicgrid.css'
 
 import BarChart from '../../charts/activity/Activity'
 import LineChart from '../../charts/sessions/Session'
-import RadarChart from '../../charts/radarchart/RadarChart'
+import UserRadar from '../../charts/radarchart/RadarChart'
 import PieChart from '../../charts/score/PieChart'
 
 
@@ -21,7 +21,7 @@ function GraphicGrid() {
         <LineChart />
       </div>
       <div className="grid-item-3">
-        <RadarChart />
+        <UserRadar />
       </div>
       <div className="grid-item-4">
       <h3 className='grid-item-title'>Score</h3>
