@@ -27,7 +27,7 @@ window.env = {
   "__CF_USER_TEXT_ENCODING": "0x1F5:0x0:0x1",
   "npm_package_browserslist_development_2": "last 1 safari version",
   "npm_execpath": "/usr/local/Cellar/yarn/1.22.19/libexec/bin/yarn.js",
-  "PATH": "/var/folders/ky/fmrgxvg91kn_9ymcnhswkq_r0000gn/T/yarn--1693575451829-0.34985006652707185:/Users/lb8/Documents/LB_majorDoc/Openclassroom/P12/sportsee-lucas/node_modules/.bin:/Users/lb8/.config/yarn/link/node_modules/.bin:/usr/local/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/bin/node_modules/npm/bin/node-gyp-bin:/opt/homebrew/bin:/Users/lb8/.yarn/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin",
+  "PATH": "/var/folders/ky/fmrgxvg91kn_9ymcnhswkq_r0000gn/T/yarn--1693822558215-0.84300916164689:/Users/lb8/Documents/LB_majorDoc/Openclassroom/P12/sportsee-lucas/node_modules/.bin:/Users/lb8/.config/yarn/link/node_modules/.bin:/usr/local/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/bin/node_modules/npm/bin/node-gyp-bin:/opt/homebrew/bin:/Users/lb8/.yarn/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin",
   "npm_config_argv": "{\"remain\":[],\"cooked\":[\"run\",\"start\"],\"original\":[\"start\"]}",
   "_": "/Users/lb8/Documents/LB_majorDoc/Openclassroom/P12/sportsee-lucas/node_modules/.bin/react-dotenv",
   "USER_ZDOTDIR": "/Users/lb8",
@@ -79,8 +79,8 @@ window.env = {
   "COLORTERM": "truecolor",
   "npm_node_execpath": "/usr/local/bin/node",
   "npm_config_version_tag_prefix": "v",
-  "REACT_APP_API_USER": "user/12",
-  "REACT_APP_API_ACTIVITY": "user/12/activity",
-  "REACT_APP_API_PERFORMANCE": "user/12/performance",
-  "REACT_APP_API_SESSION": "user/12/average-sessions"
+  "REACT_APP_API_USER": "user/18",
+  "REACT_APP_API_ACTIVITY": "user/18/activity",
+  "REACT_APP_API_PERFORMANCE": "user/18/performance",
+  "REACT_APP_API_SESSION": "user/18/average-sessions"
 };
