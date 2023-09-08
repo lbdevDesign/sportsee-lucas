@@ -1,21 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Label } from 'recharts';
-import ApiService from '../../utils/ApiService.jsx';
+import {fetchScore} from '../../utils/fomatService.jsx';
+
 
 export default function Example() {
   const [apiData, setApiData] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
-      try {
-        const url = process.env.REACT_APP_API_USER;
-        const result = await ApiService.get(url);
-        setApiData(result.data);
-      } catch (error) {
-        console.error('Error fetching pie data:', error);
-      }
+      setApiData(await fetchScore());
     }
-
     fetchData();
   }, []);
 

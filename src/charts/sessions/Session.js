@@ -1,22 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { CTSession } from '../sessions/CTSession';
-import ApiService from '../../utils/ApiService.jsx';
+import {fetchSession} from '../../utils/fomatService.jsx';
+
 
 export default function Example() {
   const [apiData, setApiData] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
-      try {
-        const url = process.env.REACT_APP_API_SESSION;
-        const result = await ApiService.get(url);
-        setApiData(result.data);
-      } catch (error) {
-        console.error('Error fetching session data:', error);
-      }
+      setApiData(await fetchSession());
     }
-
     fetchData();
   }, []);
 

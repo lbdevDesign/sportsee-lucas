@@ -3,24 +3,17 @@ import Header from '../src/componants/header/Header';
 import SideMenu from './componants/sidemenu/SideMenu';
 import GraphicGrid from './componants/graphicgrid/GraphicGrid';
 import Nutrition from './componants/nutrition/Nutrition';
-import ApiService from './utils/ApiService.jsx';
+import {fetchUser} from './utils/fomatService.jsx';
 import './App.css';
 
 function App() {
-  const [userData, setUserData] = useState(null);
+  const [userData, setApiData] = useState(null);
 
   useEffect(() => {
-    async function fetchUserData() {
-      try {
-        const url = process.env.REACT_APP_API_USER;
-        const result = await ApiService.get(url);
-        setUserData(result.data.userInfos);
-      } catch (error) {
-        console.error('Error fetching user data:', error);
-      }
+    async function fetchData() {
+      setApiData(await fetchUser());
     }
-
-    fetchUserData();
+    fetchData();
   }, []);
 
   return (

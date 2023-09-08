@@ -1,30 +1,18 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { CustomTooltip } from './CustomTooltip';
 import React, { useEffect, useState } from 'react';
-import ApiService from '../../utils/ApiService.jsx';
+import {fetchActivity} from '../../utils/fomatService.jsx';
 
 export default function UserActivity() {
   const [mapData, setMapData] = useState([]);
 
-  useEffect(() => {
+  useEffect( () => {
     async function fetchData() {
-      try {
-        const url = process.env.REACT_APP_API_ACTIVITY;
-        const result = await ApiService.get(url);
-        const mapData = result.data.sessions.map(data => ({
-          day: data.day.toString().slice(-1),
-          kilogram: data.kilogram,
-          calories: data.calories,
-        }));
-        setMapData(mapData);
-      } catch (error) {
-        // Gère l'erreur si nécessaire
-      }
-      console.log(mapData);
+      setMapData(await fetchActivity());
     }
-
     fetchData();
   }, []);
+
 
   return (
     <ResponsiveContainer width="100%" height="100%">
