@@ -32,7 +32,7 @@ export default class Example extends PureComponent {
               <Cell key={`cell-${index}`} fill={COLORS[index]} />
             ))}
               <Label 
-                value={data.value + "%"} 
+                value={"12%"} 
                 position="center" 
                 fontSize={26} 
                 fontWeight={700} dy={-10}
