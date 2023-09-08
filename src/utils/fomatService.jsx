@@ -4,7 +4,7 @@ import mockupData from './mockupData.json'
 export const fetchActivity = async () => {
     try {
         let result;
-        if (process.env.REACT_APP_API_APIUSE) {
+        if (process.env.REACT_APP_API_APIUSE === true) {
             const url = process.env.REACT_APP_API_ACTIVITY;
             result = await ApiService.get(url);
             const mapData = result.data.sessions.map(data => ({
@@ -14,9 +14,8 @@ export const fetchActivity = async () => {
             }));
             return(mapData);
         } else {
-            return mockupData.activity;
+            return(mockupData.activity);
         }
-    
     } catch (error) {
     // Gère l'erreur si nécessaire
     }
@@ -26,7 +25,7 @@ export const fetchRadar = async () => {
     try {
         let result;
         const kind = { 1: 'Cardio', 2: 'Energie', 3: 'Endurance', 4: 'Force', 5: 'Vitesse', 6: 'Intensité' }
-        if (process.env.REACT_APP_API_APIUSE) {
+        if (process.env.REACT_APP_API_APIUSE === true) {
             const url = process.env.REACT_APP_API_PERFORMANCE;
             result = await ApiService.get(url);
             const mapData = result.data.data.map(data => ({
@@ -36,7 +35,7 @@ export const fetchRadar = async () => {
             console.log(mapData);
             return(mapData);
         } else {
-            return mockupData.radar;
+            return(mockupData.radar);
         }
     } catch (error) {
         console.error('Error fetching pie data:', error);
@@ -46,12 +45,13 @@ export const fetchRadar = async () => {
 export const fetchSession = async () =>  {
     try {
         let result;
-        if (process.env.REACT_APP_API_APIUSE) {
+        if (process.env.REACT_APP_API_APIUSE === true) {
             const url = process.env.REACT_APP_API_SESSION;
             result = await ApiService.get(url);
+            console.log(result.data);
             return(result.data);
         } else {
-            return mockupData.session;
+            return(mockupData.session);
         }
     } catch (error) {
         console.error('Error fetching session data:', error);
@@ -61,13 +61,13 @@ export const fetchSession = async () =>  {
 export const fetchScore = async () => {
     try {
         let result;
-        if (process.env.REACT_APP_API_APIUSE) {
+        if (process.env.REACT_APP_API_APIUSE === true) {
             const url = process.env.REACT_APP_API_USER;
             result = await ApiService.get(url);
             console.log(result.data);
             return(result.data);
         } else {
-            return mockupData.score;
+            return(mockupData.score);
         }
     } catch (error) {
         console.error('Error fetching pie data:', error);
@@ -77,12 +77,13 @@ export const fetchScore = async () => {
 export const fetchNutrition = async () => {
     try {
         let result;
-        if (process.env.REACT_APP_API_APIUSE) {
+        if (process.env.REACT_APP_API_APIUSE === true) {
             const url = process.env.REACT_APP_API_USER;
             result = await ApiService.get(url);
+            console.log(result.data.keyData);
             return(result.data.keyData);
         } else {
-            return mockupData.nutrition
+            return(mockupData.nutrition);
         }
     } catch (error) {
         console.error('Error fetching nutrition data:', error);
@@ -92,12 +93,13 @@ export const fetchNutrition = async () => {
 export const fetchUser = async () => {
     try {
         let result;
-        if (process.env.REACT_APP_API_APIUSE) {
+        if (process.env.REACT_APP_API_APIUSE === true) {
             const url = process.env.REACT_APP_API_USER;
             result = await ApiService.get(url);
+            console.log(result.data.userInfos);
             return(result.data.userInfos);
         } else {
-            return mockupData.user
+            return(mockupData.user);
         }
     } catch (error) {
       console.error('Error fetching user data:', error);
