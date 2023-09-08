@@ -4,7 +4,7 @@ import mockupData from './mockupData.json'
 export const fetchActivity = async () => {
     try {
         let result;
-        if (process.env.REACT_APP_API_APIUSE === true) {
+        if (process.env.REACT_APP_API_APIUSE) {
             const url = process.env.REACT_APP_API_ACTIVITY;
             result = await ApiService.get(url);
             const mapData = result.data.sessions.map(data => ({
@@ -25,7 +25,7 @@ export const fetchRadar = async () => {
     try {
         let result;
         const kind = { 1: 'Cardio', 2: 'Energie', 3: 'Endurance', 4: 'Force', 5: 'Vitesse', 6: 'Intensité' }
-        if (process.env.REACT_APP_API_APIUSE === true) {
+        if (process.env.REACT_APP_API_APIUSE) {
             const url = process.env.REACT_APP_API_PERFORMANCE;
             result = await ApiService.get(url);
             const mapData = result.data.data.map(data => ({
@@ -45,7 +45,7 @@ export const fetchRadar = async () => {
 export const fetchSession = async () =>  {
     try {
         let result;
-        if (process.env.REACT_APP_API_APIUSE === true) {
+        if (process.env.REACT_APP_API_APIUSE) {
             const url = process.env.REACT_APP_API_SESSION;
             result = await ApiService.get(url);
             console.log(result.data);
@@ -61,7 +61,7 @@ export const fetchSession = async () =>  {
 export const fetchScore = async () => {
     try {
         let result;
-        if (process.env.REACT_APP_API_APIUSE === true) {
+        if (process.env.REACT_APP_API_APIUSE) {
             const url = process.env.REACT_APP_API_USER;
             result = await ApiService.get(url);
             console.log(result.data);
@@ -77,7 +77,7 @@ export const fetchScore = async () => {
 export const fetchNutrition = async () => {
     try {
         let result;
-        if (process.env.REACT_APP_API_APIUSE === true) {
+        if (process.env.REACT_APP_API_APIUSE) {
             const url = process.env.REACT_APP_API_USER;
             result = await ApiService.get(url);
             console.log(result.data.keyData);
@@ -93,7 +93,7 @@ export const fetchNutrition = async () => {
 export const fetchUser = async () => {
     try {
         let result;
-        if (process.env.REACT_APP_API_APIUSE === true) {
+        if (process.env.REACT_APP_API_APIUSE) {
             const url = process.env.REACT_APP_API_USER;
             result = await ApiService.get(url);
             console.log(result.data.userInfos);
