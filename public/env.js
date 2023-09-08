@@ -27,7 +27,7 @@ window.env = {
   "__CF_USER_TEXT_ENCODING": "0x1F5:0x0:0x1",
   "npm_package_browserslist_development_2": "last 1 safari version",
   "npm_execpath": "/usr/local/Cellar/yarn/1.22.19/libexec/bin/yarn.js",
-  "PATH": "/var/folders/ky/fmrgxvg91kn_9ymcnhswkq_r0000gn/T/yarn--1694182291792-0.841957717520817:/Users/lb8/Documents/LB_majorDoc/Openclassroom/P12/sportsee-lucas/node_modules/.bin:/Users/lb8/.config/yarn/link/node_modules/.bin:/usr/local/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/bin/node_modules/npm/bin/node-gyp-bin:/opt/homebrew/bin:/Users/lb8/.yarn/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin",
+  "PATH": "/var/folders/ky/fmrgxvg91kn_9ymcnhswkq_r0000gn/T/yarn--1694187328129-0.9873809941441245:/Users/lb8/Documents/LB_majorDoc/Openclassroom/P12/sportsee-lucas/node_modules/.bin:/Users/lb8/.config/yarn/link/node_modules/.bin:/usr/local/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/bin/node_modules/npm/bin/node-gyp-bin:/opt/homebrew/bin:/Users/lb8/.yarn/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin",
   "npm_config_argv": "{\"remain\":[],\"cooked\":[\"run\",\"start\"],\"original\":[\"start\"]}",
   "_": "/Users/lb8/Documents/LB_majorDoc/Openclassroom/P12/sportsee-lucas/node_modules/.bin/react-dotenv",
   "USER_ZDOTDIR": "/Users/lb8",

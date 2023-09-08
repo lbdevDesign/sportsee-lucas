@@ -45,14 +45,13 @@ export const fetchRadar = async () => {
 export const fetchSession = async () =>  {
     try {
         let result;
-        if (process.env.REACT_APP_API_APIUSE) {
+        console.log(process.env.REACT_APP_API_APIUSE);
+        
             const url = process.env.REACT_APP_API_SESSION;
             result = await ApiService.get(url);
             console.log(result.data);
             return(result.data);
-        } else {
-            return(mockupData.session);
-        }
+        
     } catch (error) {
         console.error('Error fetching session data:', error);
     }

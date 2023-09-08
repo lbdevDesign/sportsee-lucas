@@ -3,7 +3,7 @@
 export const CTSession = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
       return (
-        <div className="custom-tooltip" style={{marginLeft : '24px'}}>
+        <div className="custom-tooltip" style={{marginLeft : '24px'}} key=''>
           <div>
             {payload.map((pld) => (
               <div style={{ display: "flex", padding: 4, backgroundColor :'white', color : 'black', alignItems : 'center'}}>
