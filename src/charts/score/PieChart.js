@@ -15,12 +15,7 @@ export default function Example() {
 
   const COLORS = ['red', 'transparent'];
 
-  const mapData = apiData
-    ? [
-        { name: 'Group A', value: apiData.todayScore },
-        { name: 'Group B', value: 1 - apiData.todayScore },
-      ]
-    : [];
+
 
   return (
     <ResponsiveContainer width="100%" height="100%" className="PieChart-container">
