@@ -4,7 +4,7 @@ import mockupData from './mockupData.json'
 export const fetchActivity = async () => {
     try {
         let result;
-        if (process.env.REACT_APP_API_APIUSE) {
+        if (process.env.REACT_APP_API_APIUSE === "true") {
             const url = process.env.REACT_APP_API_ACTIVITY;
             result = await ApiService.get(url);
             const mapData = result.data.sessions.map(data => ({
@@ -25,7 +25,7 @@ export const fetchRadar = async () => {
     try {
         let result;
         const kind = { 1: 'Cardio', 2: 'Energie', 3: 'Endurance', 4: 'Force', 5: 'Vitesse', 6: 'Intensité' }
-        if (process.env.REACT_APP_API_APIUSE) {
+        if (process.env.REACT_APP_API_APIUSE === "true") {
             const url = process.env.REACT_APP_API_PERFORMANCE;
             result = await ApiService.get(url);
             const mapData = result.data.data.map(data => ({
@@ -45,7 +45,7 @@ export const fetchRadar = async () => {
     try {
       let result;
       const day = { 1: 'L', 2: 'M', 3: 'M', 4: 'J', 5: 'V', 6: 'S', 7: 'D' };
-      if (process.env.REACT_APP_API_APIUSE) {
+      if (process.env.REACT_APP_API_APIUSE === "true") {
         const url = process.env.REACT_APP_API_SESSION;
         result = await ApiService.get(url);
         const mapData = result.data.sessions.map(data => ({
@@ -64,18 +64,16 @@ export const fetchRadar = async () => {
 export const fetchScore = async () => {
     try {
         let result;
-        if (process.env.REACT_APP_API_APIUSE) {
+        if (process.env.REACT_APP_API_APIUSE === "true") {
             const url = process.env.REACT_APP_API_USER;
             result = await ApiService.get(url);
-            console.log(result);
-            const mapData = result
+            const apiData = result
                 ? [
                     { name: 'Group A', value: result.data.todayScore },
                     { name: 'Group B', value: 1 - result.data.todayScore },
                 ]
                 : [];
-                console.log(mapData);
-            return mapData;
+            return apiData;
         } else {
             return(mockupData.score);
         }
@@ -87,7 +85,7 @@ export const fetchScore = async () => {
 export const fetchNutrition = async () => {
     try {
         let result;
-        if (process.env.REACT_APP_API_APIUSE) {
+        if (process.env.REACT_APP_API_APIUSE === "true") {
             const url = process.env.REACT_APP_API_USER;
             result = await ApiService.get(url);
             return(result.data.keyData);
@@ -102,7 +100,7 @@ export const fetchNutrition = async () => {
 export const fetchUser = async () => {
     try {
         let result;
-        if (process.env.REACT_APP_API_APIUSE) {
+        if (process.env.REACT_APP_API_APIUSE === "true") {
             const url = process.env.REACT_APP_API_USER;
             result = await ApiService.get(url);
             return(result.data.userInfos);

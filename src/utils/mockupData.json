@@ -94,27 +94,21 @@
           }
     ],
     "score": [
-        {
-            "keydata": [
-                {"todayscore": 0.5}
-            ]
-            
-        }
+      {"name": "Group A", "value": 0.5},
+      {"name": "Group B", "value": 0.5}
     ],
-    "nutrition" : [
-        {
-            "calorieCount": 1111,
-            "carbonhydrateCount": 111,
-            "lipidCount": 11,
-            "proteinCount": 11
-        }
-    ],
-    "user" : [
-        {
-            "firstName": "Sydney",
-            "lastName": "Govou",
-            "age": 35
-        }
-    ]
+    "nutrition" : {
+      "calorieCount": 1111,
+      "carbonhydrateCount": 111,
+      "lipidCount": 11,
+      "proteinCount": 11
+    },
+    
+    "user": {
+      "firstName": "Sydney",
+      "lastName": "Govou",
+      "age": 35
+    }
+    
 }
 

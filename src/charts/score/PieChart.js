@@ -4,7 +4,8 @@ import {fetchScore} from '../../utils/fomatService.jsx';
 
 
 export default function Example() {
-  const [apiData, setApiData] = useState(null);
+  const [apiData, setApiData] = useState([]);
+
 
   useEffect(() => {
     async function fetchData() {
@@ -15,13 +16,11 @@ export default function Example() {
 
   const COLORS = ['red', 'transparent'];
 
-
-
   return (
     <ResponsiveContainer width="100%" height="100%" className="PieChart-container">
       <PieChart>
         <Pie
-          data={mapData}
+          data={apiData}
           cx='50%'
           cy='50%'
           innerRadius={70}
@@ -33,13 +32,13 @@ export default function Example() {
           endAngle={-270}
           valueKey={100}
         >
-          {mapData.map((entry, index) => (
+          {apiData.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={COLORS[index]} />
           ))}
           {apiData && (
             <>
               <Label
-                value={apiData.todayScore * 100 + '%'}
+                value={apiData[0]?.value * 100 + '%'}
                 position="center"
                 fontSize={26}
                 fontWeight={700}
