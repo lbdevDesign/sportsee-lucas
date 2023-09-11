@@ -3,8 +3,10 @@ import Header from '../src/componants/header/Header';
 import SideMenu from './componants/sidemenu/SideMenu';
 import GraphicGrid from './componants/graphicgrid/GraphicGrid';
 import Nutrition from './componants/nutrition/Nutrition';
+import NotFound from './404'; // Importe le composant 404
 import { fetchUser } from './utils/fomatService.jsx';
 import './App.css';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'; // Importe les éléments de React Router
 
 function App() {
   const [userData, setApiData] = useState(null);
@@ -42,21 +44,28 @@ function App() {
   }
 
   return (
-    <>
-      <Header />
-      <SideMenu />
+    <BrowserRouter>
+      <>
+        <Header />
+        <SideMenu />
 
-      <main className='dashboard-container'>
-        <h1 className='dashboard-title'>Bonjour <span>{userData ? userData.firstName : ''}</span></h1>
-        <p className='dashboard-subtitle'>Félicitations ! Vous avez explosé vos objectifs hier 👏</p>
+        <Routes>
+          <Route path='/' element={ 
+            <main className='dashboard-container'>
+              <h1 className='dashboard-title'>Bonjour <span>{userData ? userData.firstName : ''}</span></h1>
+              <p className='dashboard-subtitle'>Félicitations ! Vous avez explosé vos objectifs hier 👏</p>
 
-        <div className='dashboard-content'>
-          {apiStatus !== 'En marche' && error && <div className='error'>{error}</div>} {/* Affichage de l'erreur uniquement si l'API ne fonctionne pas */}
-          {userData && <GraphicGrid />}
-          {userData && <Nutrition />}
-        </div>
-      </main>
-    </>
+              <div className='dashboard-content'>
+                {apiStatus !== 'En marche' && error && <Navigate to="/404" />}
+                {userData && <GraphicGrid />}
+                {userData && <Nutrition />}
+              </div>
+            </main>
+          } />
+          <Route path='/404' element={<NotFound />} />
+        </Routes>
+      </>
+    </BrowserRouter>
   );
 }
 
