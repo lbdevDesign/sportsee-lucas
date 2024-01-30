@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/sportsee-lucas/static/css/main.7c1a2b16.css",
+    "main.js": "/sportsee-lucas/static/js/main.2e509344.js",
+    "static/media/logo_SportSee.svg": "/sportsee-lucas/static/media/logo_SportSee.837414860efdf652f26ae7be654e06c5.svg",
+    "static/media/swim.svg": "/sportsee-lucas/static/media/swim.bc12b705d445672f550a8441d581c700.svg",
+    "static/media/bicycle.svg": "/sportsee-lucas/static/media/bicycle.fe885ecda828d3e2f637bb3b675db76c.svg",
+    "static/media/glucides.svg": "/sportsee-lucas/static/media/glucides.95581ba1b204199334e122af4784ab16.svg",
+    "index.html": "/sportsee-lucas/index.html",
+    "static/media/proteines.svg": "/sportsee-lucas/static/media/proteines.ffbc3b88a759c706993bb26fbd66113b.svg",
+    "static/media/yoga.svg": "/sportsee-lucas/static/media/yoga.76760efccddf14928ee9263744c1b6e6.svg",
+    "static/media/lipides.svg": "/sportsee-lucas/static/media/lipides.18f60e0efe37e86bcac036d673f0bab0.svg",
+    "static/media/calories.svg": "/sportsee-lucas/static/media/calories.25fef86ed5860200bdf90f9cd185e1e3.svg",
+    "static/media/wheight.svg": "/sportsee-lucas/static/media/wheight.9d22814b98d0ca386d9ddacded4eae80.svg",
+    "main.7c1a2b16.css.map": "/sportsee-lucas/static/css/main.7c1a2b16.css.map",
+    "main.2e509344.js.map": "/sportsee-lucas/static/js/main.2e509344.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7c1a2b16.css",
+    "static/js/main.2e509344.js"
+  ]
+}
