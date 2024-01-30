@@ -16,7 +16,8 @@ function App() {
   useEffect(() => {
     async function checkApiStatus() {
       try {
-        const response = await fetch('http://localhost:3000/user/12'); // Remplace par l'URL de ton API
+        const response = await fetch('http://localhost:3000/user/12');
+        console.log(response);
         if (response.status === 200) {
           setApiStatus('En marche');
           fetchData(); // Si l'API est en marche, récupère les données utilisateur

@@ -17,7 +17,6 @@ export const fetchActivity = async () => {
             return(mockupData.activity);
         }
     } catch (error) {
-    // Gère l'erreur si nécessaire
     }
 }
 
